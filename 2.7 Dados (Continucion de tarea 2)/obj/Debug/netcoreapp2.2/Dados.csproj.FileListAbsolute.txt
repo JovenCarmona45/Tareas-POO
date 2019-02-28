@@ -1,0 +1,11 @@
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\bin\Debug\netcoreapp2.2\Dados.deps.json
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\bin\Debug\netcoreapp2.2\Dados.runtimeconfig.json
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\bin\Debug\netcoreapp2.2\Dados.runtimeconfig.dev.json
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\bin\Debug\netcoreapp2.2\Dados.dll
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\bin\Debug\netcoreapp2.2\Dados.pdb
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\obj\Debug\netcoreapp2.2\Dados.csprojAssemblyReference.cache
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\obj\Debug\netcoreapp2.2\Dados.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\obj\Debug\netcoreapp2.2\Dados.AssemblyInfoInputs.cache
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\obj\Debug\netcoreapp2.2\Dados.AssemblyInfo.cs
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\obj\Debug\netcoreapp2.2\Dados.dll
+C:\Users\oscar\Documents\GitHub\Tareas-POO\Dados\obj\Debug\netcoreapp2.2\Dados.pdb
