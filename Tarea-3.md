@@ -78,7 +78,7 @@ Esto quiere decir que las clases que vayan a heredar lo hagan de una sola, esto 
         public Rectangulo() : base()
         {
         }
-        public override void Dibuja()
+        public new void Dibuja()
         {
             Console.WriteLine("Se dibuja un Rectangulo en {0} de color {1}", position, fill);
         }
@@ -91,7 +91,7 @@ Esto quiere decir que las clases que vayan a heredar lo hagan de una sola, esto 
         public Cuadrado() : base()
         {
         }
-        public override void Dibuja()
+        public new void Dibuja()
         {
             Console.WriteLine("Se dibuja un Cuadrado en {0} de color {1}", position, fill);
         }
