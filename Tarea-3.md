@@ -5,7 +5,7 @@ La Clase Base es aquella que tiene sus atributos y metodos independientes de otr
 La Clase Derivada es cuando se heredan las funciones de la clase Base y se le puede agregar un atributo mas a la clase derivada.
 ## UML de Herencias
 
-![imagen1](https://github.com/JovenCarmona45/Tareas-POO/blob/master/Tarea%203/UML-Tarea3.png)
+![imagen1](https://github.com/JovenCarmona45/Tareas-POO/blob/master/Tarea%203/Tarea-03.png)
 
 En la imagen anterior, la clase base es la que se llama figura, las que estan heredando de ella son la que se llaman Circulo y Rectangulo.
 
