@@ -97,8 +97,7 @@ Esto quiere decir que las clases que vayan a heredar lo hagan de una sola, esto 
         }
 
     }
-    // Al final pude crear una nueva figura, pero no supe implementar la clase Color 
-    // la clase Figura.
+    
     class Program
     {
         static void Main()
