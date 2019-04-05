@@ -114,3 +114,5 @@ Esto quiere decir que las clases que vayan a heredar lo hagan de una sola, esto 
         }
     }
     }
+## Base
+La palabra base nos sirve para llamar a la clase padre de la cual estamos implementando los miembros de los constructores.
