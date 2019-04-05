@@ -54,116 +54,18 @@
 ## 1.3. ¿Que palabra debes agregar en la linea (public _______ string Display()) al definir A.Display()?
 Virtual
 
-2. Considera el siguiente fragmento de programa:
+## 2. Considera el siguiente fragmento de programa:
 
-using System;
 
-using System.Collections.Generic;
 
- ________ class Musico
+## 2.1. Completa el programa.
 
-    {
+## 2.2. Hay un error en uno de los puntos (A)(B)(C)(D). ¿Cuál es y por qué?
 
-    public string nombre;
+## 2.3. ¿Qué método se debe implementar obligatoriamente en ambas clases y por qué?
 
-    public Musico (string n)
+## 2.4. ¿Por qué no se ponen las llaves en (B)?, ¿Cuando si se pondrían?
 
-        {
+## 2.5. ¿Qué pasa si el método Afina() lo hacemos virtual en lugar de abstract?
 
-         nombre = n;
-
-        }
-
-   public abstract (A) void Afina();  (B)
-
-   public (C) string Display()
-
-      { 
-
-       return nombre;
-
-      }
-
-   }
-
-class Bajista; Musico
-
-  {
-
-    public string instrumento;
-
-    public Bajista (string n, string i ) ......
-
-    .........
-
-    public _________ Afina()
-
-      {
-
-      ________________
-
-      }
-
- }
-
-class Guitarrista ____________
-
-     {
-
-     public instrumento;
-
-      // Falta el constructor y otras cosas??
-
- 
-
-     }
-
- 
-
-class Program
-
- {
-
-  public static Main()
-
-   {
-
-  Musico m = new Musico("Django"); (D)
-
-  Bajista b = new Bajista("Flea");
-
-  Guitarrista g = new Guitarrista("Santana");
-
-  Musico [] m = ____________________
-
-  m[0] = b;
-
-  m[1] = g;
-
- 
-
-  foreach ( ___________)
-
-       _____________________
-
- 
-
- Console.ReadKey();
-
-  
-
- }
-
-}
-
-2.1. Completa el programa.
-
-2.2. Hay un error en uno de los puntos (A)(B)(C)(D). ¿Cuál es y por qué?
-
-2.3. ¿Qué método se debe implementar obligatoriamente en ambas clases y por qué?
-
-2.4. ¿Por qué no se ponen las llaves en (B)?, ¿Cuando si se pondrían?
-
-2.5. ¿Qué pasa si el método Afina() lo hacemos virtual en lugar de abstract?
-
-3. Implementa el programa utilizando interfaces en lugar de herencia.
+## 3. Implementa el programa utilizando interfaces en lugar de herencia.
