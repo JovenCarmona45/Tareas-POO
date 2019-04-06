@@ -73,4 +73,96 @@ No se ponen por que es un metodo abstracto, ya que si no lo fuera, ahi si se usa
 No es necesario seguirn implementandolo en las clases derivadas.
 
 ## 3. Implementa el programa utilizando interfaces en lugar de herencia.
+        using System;
 
+        using System.Collections.Generic;
+
+
+        interface IAfina
+        {
+            void Afina();
+        }
+          class Musico : IAfina
+         {
+            public string nombre;
+
+            public Musico (string n)
+            {
+                 nombre = n;
+            }
+
+            public void Afina()
+            {
+                Console.WriteLine("Afinando");
+            }
+
+            public virtual string Display()
+           { 
+               return string.Format(nombre);
+           }
+         }
+
+        class Bajista: Musico, IAfina
+        {
+            public string instrumento;
+
+            public Bajista(string n, string i) : base(n)
+            {
+                instrumento = i;
+            }
+
+            public virtual new void Afina()
+            {
+                Console.WriteLine("Afinando el bajo");
+            }
+
+            public override string Display()
+            {
+                return string.Format(instrumento);
+            }
+
+        }
+
+        class Guitarrista: Musico, IAfina
+        {
+            public string guitarra;
+
+
+            public Guitarrista(string n, string g) : base(n)
+            {
+                guitarra = g;
+            }
+            public new void Afina()
+            {
+                Console.WriteLine("Afinando la guitarra");
+            }
+
+            public override string Display()
+            {
+                return string.Format(guitarra);
+            }
+
+        }
+
+        class Program
+        {
+
+          public static void Main()
+          {
+                List<Musico> musicos = new List<Musico>();
+                Musico m = new Musico("Django"); 
+                Bajista b = new Bajista("Flea", "Bajo");
+                Guitarrista g = new Guitarrista("Santana", "Guitarra");
+                musicos.Add(b);
+                musicos.Add(g);
+                musicos.Add(m);
+
+                foreach (Musico lo in musicos)
+                {
+                    (m as IAfina).Afina();
+                    (g as IAfina).Afina();
+                    (b as IAfina).Afina();
+                }
+                Console.ReadKey();
+            }
+        }
