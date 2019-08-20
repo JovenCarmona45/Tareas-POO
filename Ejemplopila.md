@@ -1,21 +1,26 @@
-	package TipoPila;
-	public class PilaLineal
+	// Ejemplo_11_03a.cs
+	// Ejemplo de clase "Queue" (Cola)
+	// Introducción a C#, por Nacho Cabanes
+
+	using System;
+	using System.Collections;
+
+	public class Ejemplo_11_03a
 	{
-		 private static final int TAMPILA = 49;
-		 private int cima;
-		 private TipoDeDato []listaPila;
-		 public PilaLineal()
-		 {
-			 cima = -1; // condición de pila vacía
-			 listaPila = new TipoDeDato[TAMPILA];
-		 }
-		 // operaciones que modifican la pila
-		 public void insertar(TipoDeDato elemento){...}
-		 public TipoDeDato quitar(){...}
-		 public void limpiarPila(){...}
-		 //	operación de acceso a la pila
-		 public	 TipoDeDato cimaPila(){...}
-		 // verificación estado de la pila
-		 public boolean pilaVacia(){...}
-		 public boolean pilaLlena(){...}
+	    public static void Main()
+	    {
+		string palabra;
+
+		Queue miCola = new Queue();
+		miCola.Enqueue(" Hola");
+		miCola.Enqueue("soy");
+		miCola.Enqueue("yo");
+
+		for (byte i = 0; i < 3; i++)
+		{
+		    palabra = (string)miCola.Dequeue();
+		    Console.WriteLine(palabra);
+		    Console.ReadKey();
+		}
+	    }
 	}
