@@ -4,88 +4,107 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P_14PilaNumeros
+namespace P16_Cola
 {
-    class Pilas
+    class Colas
     {
-        public float[] Pila;
+        public float[] Cola;
         public int Max;
         public int Top;
         public int Apuntar;
+        public int frente, final;
 
-        public Pilas(int Max)
+        public Colas(int Max)
         {
             this.Max = Max;
-            Top = -1;
-            Pila = new float[Max];
+            frente = - 1;
+            final = - 1;
+            Cola = new float[Max];
         }
 
         public void Push(float elemento)
         {
-            if (Top != Max -1)
+            if (frente == 0 && final == Max - 1)
             {
-                Top = Top + 1;
-                Pila[Top] =  elemento; 
+                Console.Write("La cola esta llena");
             }
             else
             {
-                Console.Write("La pila esta llena");
+                if (frente == -1)
+                {
+                    frente = 0;
+                    final = 0;
+                }
+                else
+                {
+                    final = final + 1;
+                }
+                Cola[final] = elemento;
             }
+            Console.ReadKey();
         }
         public void Pop()
         {
-            if (Top != -1)
+            if (frente != -1)
             {
-                Console.WriteLine("Elemento eliminado: " + Pila[Top]);
-                Pila[Top] = 0;
-                Top = Top - 1;
+                Console.WriteLine("Elemento: " + Cola[frente] + " Sera eliminado");
+                Cola[Top] = 0;
+                if (frente == final)
+                {
+                    frente = -1;
+                    final = -1;
+                }
+                else
+                {
+                    frente = frente + 1;
+                }
             }
             else
             {
-                Console.WriteLine("La pila esta vacia");
+                Console.WriteLine("La Cola esta vacia");
             }
         }
         public void Recorrido()
         {
-            if (Top != -1)
+            if (frente != -1)
             {
-                Apuntar = Top;
-                while (Apuntar != -1) 
+                Apuntar = frente;
+                while (Apuntar <= final)
                 {
-                    Console.WriteLine("Elemento " + Pila[Apuntar] + " Posicion:  " + Apuntar);
-                    Apuntar = Apuntar - 1;
-                } 
+                    Console.WriteLine("Elemento " + Cola[Apuntar] + " Posicion:  " + Apuntar);
+                    Apuntar = Apuntar + 1;
+                }
             }
             else
             {
-                Console.WriteLine("La pila esta vacia");
+                Console.WriteLine("La Cola esta vacia");
             }
         }
         public void Busqueda(float elemento)
         {
-            if (Top != -1)
+            if (frente != -1)
             {
-                Apuntar = Top;
-                while (Apuntar != -1) 
+                Apuntar = frente;
+                while (Apuntar <= final)
                 {
-                    if (Pila[Apuntar] == elemento)
+                    if (elemento == Cola[Apuntar])
                     {
-                        Console.WriteLine("Elemento: " + elemento + " localizado posicion: " + Apuntar);
-                        return; 
+                        Console.WriteLine("Dato localizado en posicion: " + Apuntar);
+                        return;
                     }
                     else
                     {
-                        Apuntar = Apuntar - 1;
+                        Apuntar = Apuntar + 1;
                     }
-                } 
-                Console.WriteLine("El dato: " + elemento + " No esta en la pila");
+                }
+                Console.WriteLine("El dato: " + elemento + " No esta en la Cola");
             }
             else
             {
-                Console.WriteLine("La pila esta vacia");
+                Console.WriteLine("La Cola esta vacia");
             }
         }
-        ~Pilas()
+        ~Colas()
         {
 
         }
@@ -94,14 +113,14 @@ namespace P_14PilaNumeros
     {
         static void Main()
         {
-            int paracaso,Maxi=0;
+            int paracaso, Maxi = 0;
             float elemento;
-            Pilas p = new Pilas(Maxi);
+            Colas c = new Colas(Maxi);
             do
             {
                 Console.Clear();
-                Console.WriteLine("1. Crear pila \n2. Insertar Elemento \n3. Eliminar Elemento \n4. Recorrer la pila \n5. Buscar elementos en la pila \n6. Salir del programa ");
-                Console.Write("Seleccionar opcion (Menu pilas): ");
+                Console.WriteLine("1. Crear Cola \n2. Insertar Elemento \n3. Eliminar Elemento \n4. Recorrer la Cola \n5. Buscar elementos en la Cola \n6. Salir del programa ");
+                Console.Write("Seleccionar opcion (Menu Colas): ");
                 paracaso = int.Parse(Console.ReadLine());
                 Console.Clear();
                 switch (paracaso)
@@ -109,27 +128,25 @@ namespace P_14PilaNumeros
                     case 1:
                         Console.Write("Tamaño del arreglo: ");
                         Maxi = int.Parse(Console.ReadLine());
-                        p = new Pilas(Maxi);
+                        c = new Colas(Maxi);
                         break;
                     case 2:
                         Console.Write("Elementos para arreglar: ");
                         elemento = float.Parse(Console.ReadLine());
-                        p.Push(elemento);
-                        Console.WriteLine("\nPresione cualquier tecla para regresar");
-                        Console.ReadKey();
+                        c.Push(elemento);
                         break;
                     case 3:
-                        p.Pop();
+                        c.Pop();
                         Console.ReadKey();
                         break;
                     case 4:
-                        p.Recorrido();
+                        c.Recorrido();
                         Console.ReadKey();
                         break;
                     case 5:
                         Console.Write("Elemento que desea buscar:  ");
                         float ele = float.Parse(Console.ReadLine());
-                        p.Busqueda(ele);
+                        c.Busqueda(ele);
                         Console.ReadKey();
                         break;
                     case 6:
