@@ -18,7 +18,8 @@
                     {
                         Console.Clear();
                         Console.WriteLine("Formulario para la validacion de Datos utilizando expresiones Regulares");
-                        Console.WriteLine("Dato a validar\n1. Nombre \n2. Apellidos \n3. CURP \n4. RFC\n5. Sexo \n6. Fecha de Nacimiento \n7. Calle \n8. Colonia\n9. Codigo Postal \n10. Numero de casa\n11. Salir del programa");
+                        Console.WriteLine("Dato a validar\n1. Nombre \n2. Apellidos \n3. CURP \n4. RFC\n5. Sexo \n6. Fecha de Nacimiento \n7. Calle \n8. Colonia\n9. 
+                        Codigo Postal \n10. Numero de casa\n11. Salir del programa");
                         Console.Write("La opcion que desea Validar: ");
                         paracaso = int.Parse(Console.ReadLine());
                         Console.Clear();
@@ -57,7 +58,9 @@
                             case 3:
                                 Console.WriteLine("CURP que desea Validar: ");
                                 string Curp = string.Format(Console.ReadLine());
-                                Regex CURP = new Regex(@"^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9a-zA-Z]{1}[0-9]{1}$");//CAHO991127HBCRRS04
+                                Regex CURP = new Regex(@"^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}
+                                (AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9a-zA-Z]{1}[0-9]
+                                {1}$");
                                 if (CURP.IsMatch(Curp))
                                 {
                                     Console.WriteLine("El CURP esta bien escrito");
